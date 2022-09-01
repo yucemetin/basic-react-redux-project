@@ -15,13 +15,13 @@ class ProductList extends Component {
 
   addToCart = (product) => {
     this.props.actions.addToCart({ quantity: 1, product })
-    alertify.success(product.productName + " Sepete Eklendi")
+    alertify.success(product.productName + " Added to Cart", 1.5)
   }
 
   render() {
     return (
       <div>
-        <h3>Products <Badge color='success'>{this.props.currentCategory.categoryName}</Badge> </h3>
+        <h3>Products <Badge color='info'>{this.props.currentCategory.categoryName}</Badge> </h3>
         <Table striped>
           <thead>
             <tr>
@@ -43,7 +43,7 @@ class ProductList extends Component {
                   <td>{product.quantityPerUnit}</td>
                   <td>{product.unitPrice}</td>
                   <td>{product.unitsInStock}</td>
-                  <td><Button color='success' onClick={() => this.addToCart(product)}>add</Button></td>
+                  <td><Button color='success' outline onClick={() => this.addToCart(product)}>add</Button></td>
                 </tr>)
               })}
 

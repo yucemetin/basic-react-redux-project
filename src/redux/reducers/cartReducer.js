@@ -7,7 +7,7 @@ export default function cartReducer(state = initialState.cart, action) {
             let addedItem = state.find(item => item.product.id === action.payload.product.id)
             if (addedItem) {
                 let newState = state.map(item => {
-                    if (item.product.id === action.item.product.id) {
+                    if (item.product.id === action.payload.product.id) {
                         return Object.assign({}, addedItem, { quantity: addedItem.quantity + 1 })
                     }
                     return item;
@@ -18,7 +18,9 @@ export default function cartReducer(state = initialState.cart, action) {
                 return [...state, { ...action.payload }]
             }
 
-
+        case actionTypes.REMOVE_FROM_CART:
+            const newState2 = state.filter(cartItem => cartItem.product.id !== action.payload.id)
+            return newState2
 
 
         default:
