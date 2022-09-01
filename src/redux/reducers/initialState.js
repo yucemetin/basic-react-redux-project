@@ -1,4 +1,6 @@
 export default {
-    currenCategory: { categoryName: "deneme" },
-    categories: []
+    currenCategory: {},
+    categories: [],
+    products: [],
+    cart: []
 }
