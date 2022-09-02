@@ -10,7 +10,7 @@
     },
     {
       "id": 2,
-      "categoryId": 1,
+      "categoryId": 4,
       "productName": "Chang",
       "quantityPerUnit": "24 - 12 oz bottles",
       "unitPrice": "21",
@@ -607,14 +607,6 @@
       "quantityPerUnit": "12 boxes",
       "unitPrice": 13,
       "unitsInStock": 32
-    },
-    {
-      "productName": "Laptop",
-      "categoryId": 4,
-      "unitPrice": "1000",
-      "quantityPerUnit": "1",
-      "unitsInStock": "2",
-      "id": 78
     }
   ],
   "categories": [
